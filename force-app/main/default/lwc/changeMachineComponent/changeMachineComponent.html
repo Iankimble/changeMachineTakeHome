@@ -1,0 +1,60 @@
+<template>
+    <div class="c-container">
+        <!--Dashboard-->
+           <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <h2 class="slds-text-heading_medium slds-m-bottom_medium">DashBoard</h2>
+            </div>
+            <lightning-card title="">
+                   <lightning-layout vertical-align="center" class="x-large">
+                        <lightning-layout-item flexibility="auto" padding="around-small">
+                            <div class="custom-box">%</div>
+                        </lightning-layout-item>
+                        <lightning-layout-item flexibility="auto" padding="around-small">
+                            <div class="custom-box">%</div>
+                        </lightning-layout-item>
+                        <lightning-layout-item flexibility="auto" padding="around-small">
+                            <div class="custom-box">%</div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+            </lightning-card>
+
+        <!--Table-->
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <h2 class="slds-text-heading_medium slds-m-bottom_medium">Table</h2>
+        </div>
+        <div style="height: 200px;" title="Table">
+            <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}>
+            </lightning-datatable>
+        </div>
+        
+        <!--Change buttons-->    
+        
+        <lightning-layout vertical-align="center" >
+            <lightning-layout-item padding="around-small" flexibility="auto">
+                 <div class="custom-box">
+                <lightning-button label="change" onclick={makeChange} class="button"></lightning-button>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" flexibility="auto">
+                <div class="custom-box">
+                <lightning-button label="machine" onclick={makeChange} class="button"></lightning-button>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" flexibility="auto">
+                <div class="custom-box">
+                <lightning-button label="changeMachine" onclick={makeChange} class="button"></lightning-button>
+                </div>
+            </lightning-layout-item>   
+        </lightning-layout>
+
+        <!--Change button output-->
+            <div>     
+            <lightning-card  title="Message" class="card">
+                       <p class="output">{apexResult.data}</p>
+            </lightning-card>
+        </div>
+    </div>
+</template>

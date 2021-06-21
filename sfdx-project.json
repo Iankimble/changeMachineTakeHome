@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "ChangeMachineTakeHome",
+  "namespace": "",
+  "sfdcLoginUrl": "https://agility-velocity-9935-dev-ed.cs1.my.salesforce.com/",
+  "sourceApiVersion": "51.0"
+}
